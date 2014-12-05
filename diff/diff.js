@@ -58,11 +58,6 @@ randoms = [
   rndInt(l,u),
   rndInt(l,u),
   rndInt(l,u),
-  rndInt(l,u),
-  rndInt(l,u),
-  rndInt(l,u),
-  rndInt(l,u),
-  rndInt(l,u),
   rndInt(l,u)
 ]
 
@@ -73,10 +68,12 @@ things = [
   ],
   [
     katex.renderToString("f(" + max + ")") + " ist ein lokales Maximum",
-    katex.renderToString("f(" + min + ")") + " ist ein lokales Minimum"
+    katex.renderToString("f(" + min + ")") + " ist ein lokales Minimum",
+    katex.renderToString("(" + randoms[1] + "|" + calc(randoms[1]) + ")") + " ist Punkt der ersten Ableitung"
   ]
   [
     katex.renderToString("f(" + w + ")") + " ist ein Wendepunkt",
     "Die zweite Ableitung hat einen " + katex.renderToString("y") + "-Achsenabschnitt von " + katex.renderToString("" + b__),
+    katex.renderToString("(" + randoms[2] + "|" + calc(randoms[2]) + ")") + " ist Punkt der zweiten Ableitung"
   ]
 ]
