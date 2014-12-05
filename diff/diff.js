@@ -34,7 +34,7 @@ calc__ = function(x) {
   return a__*x+b__;
 }
 
-delta = function() { return p(b_,2) - 4*a_*c_; }
+delta = function() { return pow(b_,2) - 4*a_*c_; }
 root_ = function() {
   return [
     ((-b)+Math.sqrt(delta()))/(2*a),
