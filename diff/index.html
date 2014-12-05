@@ -8,7 +8,7 @@
       #container { width:60%; margin:auto; text-align:left; }
       body { text-align:center; }
       p,li { font-family: 'Source Sans Pro',sans-serif; }
-      .hidden { background-color:#000; }
+      .hidden { background-color:#000; padding:1em; border-radius:0.5em; }
       .hidden:hover { background-color:#fff; }
     </style>
   </head>
@@ -26,7 +26,7 @@
       <li><script>document.write(randomInArray(things[1]));</script></li>
       <li><script>document.write(randomInArray(things[2]));</script></li>
     </ul>
-    <p>Lösung: <span class="hidden"><script>document.write(katex.renderToString("f(x)="+a+"x^3+"+b+"x^2+"+c+"x+"+d));</script></span></p>
+    <p>Lösung (Mauszeiger drauf zum Anzeigen): <span class="hidden"><script>document.write(katex.renderToString("f(x)="+a+"x^3+"+b+"x^2+"+c+"x+"+d));</script></span></p>
     </div>
   </body>
 </html>
