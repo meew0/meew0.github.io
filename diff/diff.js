@@ -49,8 +49,22 @@ root__ = function() {
 evs = root_();
 
 // Extremwertentscheid
-max = (calc__(evs[0]) < 0) ? evs[0] : evs[1];
-min = (calc__(evs[0]) >= 0) ? evs[0] : evs[1];
+maxSgn = (calc__(evs[0]) < 0) ? 1 : -1;
+minSgn = (calc__(evs[0]) >= 0) ? 1 : -1;
+
+maxNum = (Number.isInteger(Math.sqrt(delta()))) 
+  ? ("" + ((-b)*maxSgn+Math.sqrt(delta()))) 
+  : ("" + (-b) + ((maxSgn > 0) ? "+" : "-") + "\\sqrt{" + delta() + "}");
+  
+minNum = (Number.isInteger(Math.sqrt(delta()))) 
+  ? ("" + ((-b)*minSgn+Math.sqrt(delta()))) 
+  : ("" + (-b) + ((minSgn > 0) ? "+" : "-") + "\\sqrt{" + delta() + "}");
+
+denom = 2*a;
+
+max = "\\frac{" + maxNum + "}{" + denom + "}";
+min = "\\frac{" + minNum + "}{" + denom + "}";
+
 w = root__();
 
 randoms = [
@@ -67,8 +81,8 @@ things = [
     katex.renderToString("(" + 0 + "|" + calc(0) + ")") + " ist Punkt der Funktion",
   ],
   [
-    katex.renderToString("f(" + max + ")") + " ist ein lokales Maximum",
-    katex.renderToString("f(" + min + ")") + " ist ein lokales Minimum",
+    katex.renderToString("f\\left(" + max + "\\right)") + " ist ein lokales Maximum",
+    katex.renderToString("f\\left(" + min + "\\right)") + " ist ein lokales Minimum",
     katex.renderToString("(" + randoms[1] + "|" + calc(randoms[1]) + ")") + " ist Punkt der ersten Ableitung"
   ],
   [
