@@ -70,7 +70,7 @@ things = [
     katex.renderToString("f(" + max + ")") + " ist ein lokales Maximum",
     katex.renderToString("f(" + min + ")") + " ist ein lokales Minimum",
     katex.renderToString("(" + randoms[1] + "|" + calc(randoms[1]) + ")") + " ist Punkt der ersten Ableitung"
-  ]
+  ],
   [
     katex.renderToString("f(" + w + ")") + " ist ein Wendepunkt",
     "Die zweite Ableitung hat einen " + katex.renderToString("y") + "-Achsenabschnitt von " + katex.renderToString("" + b__),
