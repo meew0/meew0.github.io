@@ -3,14 +3,27 @@
   <head>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+      #container { width:60%; margin:auto; text-align:left; }
+      body { text-align:center; }
+      * { font-family: 'Source Sans Pro',sans-serif; }
+    </style>
   </head>
   <body>
+    <div id="container">
     <script src="diff.js"></script>
-    Finde eine Funktion <script>document.write(katex.renderToString("f(x)=ax^3+bx^2+cx+d"));</script> mit folgenden Eigenschaften:
+    <p>Finde eine Funktion <script>document.write(katex.renderToString("f(x)=ax^3+bx^2+cx+d"));</script> mit folgenden Eigenschaften:</p>
     <script>
       randomInArray = function(array) {
         return array[rndInt(0,array.length)];
       };
-      document.write(randomInArray(things[0]));document.write(randomInArray(things[1]));document.write(randomInArray(things[2]));</script>
+    </script>
+    <ul>
+      <li><script>document.write(randomInArray(things[0]));</script></li>
+      <li><script>document.write(randomInArray(things[1]));</script></li>
+      <li><script>document.write(randomInArray(things[2]));</script></li>
+    </ul>
+    </div>
   </body>
 </html>
