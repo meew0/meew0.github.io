@@ -65,7 +65,9 @@ denom = 2*a;
 max = "\\frac{" + maxNum + "}{" + denom + "}";
 min = "\\frac{" + minNum + "}{" + denom + "}";
 
-w = root__();
+w = (Number.isInteger(root__()))
+  ? ("" + root__())
+  : ("\\frac{" + (-b__) + "}{" + (a__) + "}");
 
 randoms = [
   rndInt(l,u),
@@ -86,7 +88,7 @@ things = [
     katex.renderToString("(" + randoms[1] + "|" + calc(randoms[1]) + ")") + " ist Punkt der ersten Ableitung"
   ],
   [
-    katex.renderToString("f(" + w + ")") + " ist ein Wendepunkt",
+    katex.renderToString("f\\left(" + w + "\\right)") + " ist ein Wendepunkt",
     "Die zweite Ableitung hat einen " + katex.renderToString("y") + "-Achsenabschnitt von " + katex.renderToString("" + b__),
     katex.renderToString("(" + randoms[2] + "|" + calc(randoms[2]) + ")") + " ist Punkt der zweiten Ableitung"
   ]
