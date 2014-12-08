@@ -80,7 +80,7 @@ randoms = [
 things = [
   [
     katex.renderToString("(" + randoms[0] + "|" + calc(randoms[0]) + ")") + " ist Punkt der Funktion",
-    katex.renderToString("(" + 0 + "|" + calc(0) + ")") + " ist Punkt der Funktion",
+    katex.renderToString("(" + 0 + "|" + calc(0) + ")") + " ist Punkt der Funktion"
   ],
   [
     katex.renderToString("\\left(" + max + "|" + calc(max) + "\\right)") + " ist ein lokales Maximum",
