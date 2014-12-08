@@ -20,6 +20,13 @@
         body = document.getElementById("content");
         body.innerHTML = localStorage.getItem("content-" + tag);
       }
+    </script>
+  </head>
+  <body>
+    <div id="name" contenteditable></div>  
+    <div id="content" contenteditable></div>
+    <script>
+      
       document.getElementById("name").addEventListener("input", changeTag);
       document.getElementById("content").addEventListener("input", saveBody);
       document.getElementById("html").addEventListener("click", function(event) {
@@ -28,9 +35,5 @@
         }
       });
     </script>
-  </head>
-  <body>
-    <div id="name" contenteditable></div>  
-    <div id="content" contenteditable></div>
   </body>
 </html>
