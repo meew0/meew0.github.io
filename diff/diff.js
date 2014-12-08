@@ -83,12 +83,13 @@ things = [
     katex.renderToString("(" + 0 + "|" + calc(0) + ")") + " ist Punkt der Funktion",
   ],
   [
-    katex.renderToString("f\\left(" + max + "\\right)") + " ist ein lokales Maximum",
-    katex.renderToString("f\\left(" + min + "\\right)") + " ist ein lokales Minimum",
+    katex.renderToString("\\left(" + max + "|" + calc(max) + "\\right)") + " ist ein lokales Maximum",
+    katex.renderToString("\\left(" + min + "|" + calc(min) + "\\right)") + " ist ein lokales Minimum",
     katex.renderToString("(" + randoms[1] + "|" + calc(randoms[1]) + ")") + " ist Punkt der ersten Ableitung"
+    "Der Punkt " + katex.renderToString("(" + randoms[0] + "|" + calc(randoms[0]) + ")") + " hat eine Steigung von " + katex.renderToString(calc_(randoms(0))),
   ],
   [
-    katex.renderToString("f\\left(" + w + "\\right)") + " ist ein Wendepunkt",
+    katex.renderToString("f\\left(" + w + "\\right)") + " ist ein Wendepunkt, die zugehörige Wendetangente hat eine Steigung von " + katex.renderToString(calc_(w)),
     "Die zweite Ableitung hat einen " + katex.renderToString("y") + "-Achsenabschnitt von " + katex.renderToString("" + b__),
     katex.renderToString("(" + randoms[2] + "|" + calc(randoms[2]) + ")") + " ist Punkt der zweiten Ableitung"
   ]
