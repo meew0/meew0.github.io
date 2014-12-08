@@ -88,8 +88,7 @@ var things = [
   [
     katex.renderToString("\\left(" + max + "|" + calc(maxV) + "\\right)") + " ist ein lokales Maximum",
     katex.renderToString("\\left(" + min + "|" + calc(minV) + "\\right)") + " ist ein lokales Minimum",
-    katex.renderToString("(" + randoms[1] + "|" + calc(randoms[1]) + ")") + " ist Punkt der ersten Ableitung",
-    "Der Punkt " + katex.renderToString("(" + randoms[0] + "|" + calc(randoms[0]) + ")") + " hat eine Steigung von " + katex.renderToString("" + calc_(randoms[0]))
+    "Der Punkt " + katex.renderToString("(" + randoms[3] + "|" + calc(randoms[3]) + ")") + " hat eine Steigung von " + katex.renderToString("" + calc_(randoms[0]))
   ],
   [
     katex.renderToString("f\\left(" + w + "\\right)") + " ist ein Wendepunkt, die zugehörige Wendetangente hat eine Steigung von " + katex.renderToString("" + calc_(w)),
