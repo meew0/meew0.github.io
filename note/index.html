@@ -7,9 +7,16 @@
     </style>
     <script>
       saveBody = function() {
+        body = document.getElementById("content");
+        localStorage.setItem("content", body.innerHTML);
+      }
+      
+      loadBody = function() {
+        body = document.getElementById("content");
+        body.innerHTML = localStorage.getItem("content");
       }
     </script>
   </head>
-  <body contenteditable style="font-size:2rem;line-height:1.4;max-width:60rem;margin:0 auto;padding:4rem;">
+  <body id="content" onkeydown="saveBody()" onload="loadBody()" contenteditable style="font-size:2rem;line-height:1.4;max-width:60rem;margin:0 auto;padding:4rem;">
   </body>
 </html>
