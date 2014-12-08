@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <title id="title">Notes</title>
     <style type="text/css">
       @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
       div { font-size:2rem;line-height:1.4;max-width:60rem;margin:0 auto; font-family: "Source Sans Pro"; outline:none; }
@@ -15,6 +16,7 @@
       
       changeTag = function() {
         tag = document.getElementById("name").innerHTML;
+        document.getElementById("title").innerHTML = tag;
         body = document.getElementById("content");
         body.innerHTML = localStorage.getItem("content-" + tag);
       }
