@@ -20,10 +20,17 @@
         body = document.getElementById("content");
         body.innerHTML = localStorage.getItem("content-" + tag);
       }
+      document.getElementById("name").addEventListener("input", changeTag);
+      document.getElementById("content").addEventListener("input", saveBody);
+      document.getElementById("html").addEventListener("click", function(event) {
+        if(event.screenX > 69) {
+          document.getElementById("content").focus();
+        }
+      });
     </script>
   </head>
   <body>
-    <div id="name" oninput="changeTag()" contenteditable></div>  
-    <div id="content" oninput="saveBody()" contenteditable></div>
+    <div id="name" contenteditable></div>  
+    <div id="content" contenteditable></div>
   </body>
 </html>
