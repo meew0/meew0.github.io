@@ -60,8 +60,8 @@ minNum = (Number.isInteger(Math.sqrt(delta())))
   ? ("" + ((-b)*minSgn+Math.sqrt(delta()))) 
   : ("" + (-b) + ((minSgn > 0) ? "+" : "-") + "\\sqrt{" + delta() + "}");
   
-minV = (minSgn >= 0) ? evs[0] : evs[1];
-maxV = (maxSgn < 0) ? evs[0] : evs[1];
+maxV = (calc__(evs[0]) < 0) ? evs[0] : evs[1];
+minV = (calc__(evs[0]) >= 0) ? evs[0] : evs[1];
 
 denom = 2*a;
 
@@ -86,8 +86,8 @@ var things = [
     katex.renderToString("(" + 0 + "|" + calc(0) + ")") + " ist Punkt der Funktion"
   ],
   [
-    katex.renderToString("\\left(" + max + "|" + calc(max) + "\\right)") + " ist ein lokales Maximum",
-    katex.renderToString("\\left(" + min + "|" + calc(min) + "\\right)") + " ist ein lokales Minimum",
+    katex.renderToString("\\left(" + max + "|" + calc(maxV) + "\\right)") + " ist ein lokales Maximum",
+    katex.renderToString("\\left(" + min + "|" + calc(minV) + "\\right)") + " ist ein lokales Minimum",
     katex.renderToString("(" + randoms[1] + "|" + calc(randoms[1]) + ")") + " ist Punkt der ersten Ableitung",
     "Der Punkt " + katex.renderToString("(" + randoms[0] + "|" + calc(randoms[0]) + ")") + " hat eine Steigung von " + katex.renderToString("" + calc_(randoms[0]))
   ],
