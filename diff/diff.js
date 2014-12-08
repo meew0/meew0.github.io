@@ -59,6 +59,9 @@ maxNum = (Number.isInteger(Math.sqrt(delta())))
 minNum = (Number.isInteger(Math.sqrt(delta()))) 
   ? ("" + ((-b)*minSgn+Math.sqrt(delta()))) 
   : ("" + (-b) + ((minSgn > 0) ? "+" : "-") + "\\sqrt{" + delta() + "}");
+  
+minV = (minSgn >= 0) ? evs[0] : evs[1];
+maxV = (maxSgn < 0) ? evs[0] : evs[1];
 
 denom = 2*a;
 
