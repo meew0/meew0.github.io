@@ -4,6 +4,6 @@
 <input id="asdf" type="text"><button id="btn" onclick="computeSquare()">Quadrat errechnen</button>
 <div id="quadrat"></div>
 <script>
-computeSquare = function() {document.getElementById("quadrat").innerHTML = document.getElementById("asdf").value ** 2;}
+computeSquare = function() {document.getElementById("quadrat").innerHTML = parseInt(document.getElementById("asdf").value) * parseInt(document.getElementById("asdf").value);}
 </script>
 </body></html>
