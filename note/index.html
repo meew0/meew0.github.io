@@ -29,7 +29,7 @@
         s.innerHTML = "";
         for (var key in localStorage) {
           if (localStorage.hasOwnProperty(key) && key.startsWith("content-")) {
-            keyName = s.substring(0, 8);
+            keyName = key.substring(0, 8);
             if(keyName.startsWith(tag)) {
               s.innerHTML += ("<li>" + key + "</li>");
             }
