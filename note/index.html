@@ -6,6 +6,7 @@
       @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
       div { font-size:2rem;line-height:1.4;max-width:60rem;margin:0 auto; font-family: "Source Sans Pro"; outline:none; }
       #name { padding-bottom: 0.75em; margin-bottom:0.75em; border-bottom:1px solid #ddd; }
+      #suggestions { position:fixed; top:1em; left:1em; width:10rem; }
     </style>
     <script>
       tag = "";
@@ -16,6 +17,17 @@
       
       changeTag = function() {
         tag = document.getElementById("name").innerHTML;
+        
+        
+        s = document.getElementById("suggestions");
+        s.innerHTML = "";
+        for (var key in localStorage) {
+          if (localStorage.hasOwnProperty(key)) {
+            s.innerHTML += key;
+            s.innerHTML += "<br>";
+          }
+        }
+        
         document.getElementById("title").innerHTML = tag;
         body = document.getElementById("content");
         body.innerHTML = localStorage.getItem("content-" + tag);
@@ -23,6 +35,7 @@
     </script>
   </head>
   <body>
+    <div id="suggestions"></div>
     <div id="name" contenteditable></div>  
     <div id="content" contenteditable></div>
     <script>
