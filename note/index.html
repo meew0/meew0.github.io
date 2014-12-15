@@ -10,6 +10,11 @@
       #suggestions, #suggestions li { font-size:12pt; color:#ccc; list-style-type:none; }
     </style>
     <script>
+      if (typeof String.prototype.startsWith != 'function') {
+        String.prototype.startsWith = function (str){
+          return this.slice(0, str.length) == str;
+        };
+      }
       tag = "";
       saveBody = function() {
         body = document.getElementById("content");
