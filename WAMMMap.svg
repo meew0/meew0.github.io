@@ -23,6 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>World Map</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,9 +40,9 @@
      inkscape:window-height="1034"
      id="namedview9804"
      showgrid="false"
-     inkscape:zoom="1.1894197"
-     inkscape:cx="397.01193"
-     inkscape:cy="293.10608"
+     inkscape:zoom="6.7283741"
+     inkscape:cx="136.50445"
+     inkscape:cy="365.30387"
      inkscape:window-x="48"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -19736,4 +19737,13 @@ IHdrUkq6nQ5hFDExUebiCxfx/XBYj4c9x0/GMdnCBP8PuLAHtK6L+zIAAAAASUVORK5CYII=
            sodipodi:role="line">&gt;_</tspan></text>
     </g>
   </g>
+  <path
+     style="fill:#999999;stroke:#6d6d6d;stroke-width:3.22538471px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 433.59766,444.72771 20.61294,-17.73673 16.2986,10.06678 -6.23181,25.88602 z"
+     id="path10250"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccc">
+    <title
+       id="title10760">Bucket</title>
+  </path>
 </svg>
