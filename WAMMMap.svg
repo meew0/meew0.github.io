@@ -9540,11 +9540,15 @@
        x="735.70624"
        y="397.58646" />
   </a>
-  <image
-     y="297.80957"
-     x="1255.696"
-     id="image28367"
-     xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+  <a
+     id="a28370"
+     xlink:href="https://twitter.com/TomahawkXND729">
+    <title
+       id="title28373">Tomahawk</title>
+    <image
+       width="14.115616"
+       height="14.115616"
+       xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
 HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
 MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAGQAZADASIA
 AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
@@ -9779,6 +9783,8 @@ fK8NaZ8vTdAG/nmteDR9LtMfZtNs4dv3fLt0XH0wKvU2gBAAqgKNoHQDjFBJPc/nRSUAJgegpDS0
 hoASkJpc0lACUhNLTTQAE0lFJQAh60hpTSZ4oASkoNBoAQ0hNLTe1ACUnelpKAEpKWm0AFFFFABR
 RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/2Q==
 "
-     height="14.115616"
-     width="14.115616" />
+       id="image28367"
+       x="1255.696"
+       y="297.80957" />
+  </a>
 </svg>
