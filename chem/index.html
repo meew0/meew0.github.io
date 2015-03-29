@@ -17,9 +17,9 @@
             //document.domain = "chemspider.com";
             n = Math.random() * 30000000 + 1;
             n = Math.floor(n);
-            $('.compound-img').attr('src', 'http://www.chemspider.com/ImagesHandler.ashx?id=' + n + '&w=500&h=500');
-            $('.compound-link').attr('href', 'http://www.chemspider.com/Chemical-Structure.' + n + '.html');
-            $('.compound-name').load('http://www.chemspider.com/Chemical-Structure.' + n + '.html #prop1 h1');
+            $('.compound-img').attr('src', 'https://www.chemspider.com/ImagesHandler.ashx?id=' + n + '&w=500&h=500');
+            $('.compound-link').attr('href', 'https://www.chemspider.com/Chemical-Structure.' + n + '.html');
+            $('.compound-name').load('https://www.chemspider.com/Chemical-Structure.' + n + '.html #prop1 h1');
             $('.compound-link').text('View compound ' + n + ' on ChemSpider');
         </script>
     </body>
