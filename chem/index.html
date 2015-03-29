@@ -3,16 +3,22 @@
     <head>
         <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <style>
+            body { text-align: center; background-color: #aaa; }
+            #container { margin: auto; }
+            .compound-img { padding: 20px; border-radius: 20px; background-color: #eee; }
+            .compound-link { color: #333; text-decoration: none; }
         </style>
     </head>
     <body>
-        <img class="compound-img">
-        
-        </img>
-        <div class="compound-name">
+        <div id="container">
+            <img class="compound-img">
+            
+            </img>
+            <div class="compound-name">
+            </div>
+            <a class="compound-link">
+            </a>
         </div>
-        <a class="compound-link">
-        </a>
         <script>
             //document.domain = "chemspider.com";
             n = Math.random() * 30000000 + 1;
