@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TitanCast</title>
+		<meta charset="utf-8" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+		
+		<!-- FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		
+		<!-- FONT AWESOME -->
+		<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+		
+		<!-- SKELETON (only grid) -->
+		<link href="css/skeleton.css" type="text/css" rel="stylesheet" />
+		
+		<!-- NORMALIZE.CSS (for Skeleton) -->
+		<link href="css/normalize.css" type="text/css" rel="stylesheet" />
+		
+		<!-- JQUERY (not needed right now) -->
+		<!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+		
+		<!-- SKROLLR -->
+		<script src="js/skrollr.min.js"></script>
+		
+		<link href="css/style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- First section, contains the title, the intro blurb and a download button -->
+		<section id="header" class="section fixed-section"
+			data-top="top:0%"
+			data--100-top="top:100%"
+			data-anchor-target="#how-it-works">
+			<div class="container jumbo">
+				<h1>TitanCast</h1>
+				<p class="intro-blurb">Use your Android device as a controller for your PC.</p>
+				<a class="large-button" href="https://github.com/TitanCast/TitanCast/releases">Download</a>
+				<i class="fa fa-angle-down fa-4x guide-icon h-center-bottom"></i>
+			</div>
+		</section>
+		
+		<!-- Second section, tells you what TitanCast is and how it works -->
+		<section id="how-it-works" class="section bordered"
+			data-start="top:100%;"
+			data-top="top:100%;"
+			style="top:100%;">
+			<div class="container">
+				<h2>What is it?</h2>
+				<div class="desc-column">
+					TitanCast creates a bridge between your PC and your Android device, allowing low latency communication. As a result, you can transform your device into a secondary controller or screen. 
+				</div>
+				<h2>How it works</h2>
+				<div class="svg-container">
+					<object width="100%" data="images/how-it-works.svg"></object>
+				</div>
+				<div class="row">
+					<div class="six columns desc-column">
+						<div class="desc-header"><h3>Android device</h3></div>
+						An Android app displays an HTML page that sends and receives data through a JavaScript API, which the app relays to the PC.
+					</div>
+					<div class="six columns desc-column">
+						<div class="desc-header"><h3>Desktop PC</h3></div>
+						The PC communicates with the smartphone through bindings for various programming languages.
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Third section, shows some of TitanCast's advantages and contains another download button -->
+		<section id="footer" class="section fixed-section"
+			data-bottom="top:0%"
+			data-top-bottom="top:0%"
+			data-top="top:100%"
+			data-anchor-target="#how-it-works">
+			<div class="container jumbo">
+				<div class="row">
+					<div class="four columns desc-column">
+						<div class="desc-header">
+							<h3>Powerful</h3>
+							<i class="fa fa-cogs fa-4x blurb-icon"></i>
+						</div>
+						With aims to bring a seamless bridge between phone/tablet and desktops, TitanCast is lightweight enough to be blazing fast, yet has enough features to be truly useful. Applications can make use of sensors such as the accelerometer and be able to send data with ease. 
+					</div>
+					<div class="four columns desc-column">
+						<div class="desc-header">
+							<h3>Open source</h3>
+							<i class="fa fa-github fa-4x blurb-icon"></i>
+						</div>
+						TitanCast's source code is available <a href="https://github.com/TitanCast/" class="text-link">here</a>. Because the code is open for scrutiny, you can be sure that you receive stable updates of TitanCast. 
+					</div>
+					<div class="four columns desc-column">
+						<div class="desc-header">
+							<h3>Simple</h3>
+							<i class="fa fa-bolt fa-4x blurb-icon"></i>
+						</div>
+						It's <em>really</em> simple for developers everywhere to integrate TitanCast into their applications. Even if you're not planning on developing anything, TitanCast is so easy to setup that you'll be able to connect to any application within a matter of seconds. 
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<a class="large-button" href="https://github.com/TitanCast/TitanCast/releases">Download</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- This script only initializes skrollr -->
+		<script src="js/main.js"></script>
+	</body>
+</html>

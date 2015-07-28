@@ -1,0 +1,114 @@
+body {
+	background-color: #333355;
+	color: #eeccaa;
+	
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Large element that contains the title and download link */
+.jumbo {
+	text-align: center;
+}
+
+/* Icons */
+.blurb-icon { margin-bottom:30px; }
+.guide-icon { color: rgba(238, 204, 170, 0.3); }
+
+/* Fixed element on the bottom of the page, centered horizontally
+ * (in this case the arrow that guides you to scroll down) */
+.h-center-bottom {
+	position: fixed;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* The div that contains the schematic */
+.svg-container {
+	text-align: center;
+}
+
+/* Sections */
+.section { 
+	position: absolute;
+	width: 100%;
+	padding-bottom: 200px;
+	background-color: #333355;
+}
+.section.bordered { /* Add a line to some sections */
+	border-top: 1px solid #ffcc88;
+	border-bottom: 1px solid #ffcc88;
+	z-index: 1000;
+}
+.section.fixed-section { /* Fix the first and last section on the page */
+	position:fixed;
+	z-index:500;
+}
+
+/* Headers */
+h1, h2 { margin-bottom: 0.33em; }
+h1 { font-size: 72pt; }
+h2 { font-size: 54pt; }
+h3 { font-size: 24pt; }
+
+/* Text */
+p.intro-blurb { 
+	font-size: 24pt;
+	margin-bottom: 2em; 
+}
+.desc-column {
+	text-align: justify;
+	font-size: 18pt;
+	margin-bottom: 100px;
+}
+.desc-header {
+	text-align: center;
+}
+
+/* The "Download" button */
+a.large-button, a.large-button:visited {
+	border: 5px solid #eeccaa;
+	padding: 20px;
+	
+	color: #eeccaa;
+	
+	font-size: 30pt;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.large-button:hover {
+	border-color: #ffcc88;
+	background-color: #ffcc88;
+	color: #333355;
+}
+
+/* Inline links */
+a.text-link {
+	border-bottom: 3px solid #ffcc88;
+	text-decoration: none;
+	color: #ffcc88;
+	outline: none;
+}
+a.text-link:hover {
+	color: #ff7777;
+	border-color: #ff7777;
+}
+
+/* We don't want any outlines on links, ever */
+a, a:visited, a:hover { outline: none; }
+
+/* Larger than mobile */
+@media (min-width: 400px) { .section.fixed-section { margin-top: 0; } }
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) { .section.fixed-section { margin-top: 15vh; } }
+
+/* Larger than desktop */
+@media (min-width: 1000px) { }
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {  }
