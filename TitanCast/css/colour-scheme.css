@@ -1,0 +1,36 @@
+body {
+	background-color: #3498db;
+	color: #ffffff;
+}
+
+/* Icons */
+.guide-icon { color: rgba(255, 255, 255, 0.3); }
+
+/* Sections */
+.section { 
+	background-color: #3498db;
+}
+.section.bordered { /* Add a line to some sections */
+	border-top-color: #ffffff;
+	border-bottom-color: #ffffff;
+}
+/* The "Download" button */
+a.large-button, a.large-button:visited {
+	border-color: #ffffff;
+	color: #ffffff;
+}
+a.large-button:hover {
+	border-color: #ffffff;
+	background-color: #ffffff;
+	color: #3498db;
+}
+
+/* Inline links */
+a.text-link {
+	border-bottom-color: #ffffff;
+	color: #ffffff;
+}
+a.text-link:hover {
+	color: #99CEF2;
+	border-color: #99CEF2;
+}
