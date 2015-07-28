@@ -42,8 +42,8 @@ body {
 	z-index: 1000;
 }
 .section.fixed-section { /* Fix the first and last section on the page */
-	position:fixed;
-	z-index:500;
+	position: fixed;
+	z-index: 500;
 }
 
 /* Headers */
