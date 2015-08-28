@@ -1,4 +1,8 @@
-a
-======
-*test* **test** test
-[a](https://google.com)
+---
+title: Making bots
+layout: post
+---
+
+Hi
+
+**test** [a](https://google.com)
