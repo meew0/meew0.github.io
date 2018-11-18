@@ -1,0 +1,806 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Discord Bots survey results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,700|Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <style>
+      .body { text-align: center; }
+      .container {
+        margin: auto;
+        text-align: left;
+      }
+
+      * { font-family: "Alegreya", serif; }
+      code { font-family: monospace; background-color: #eee; color: #333; padding: 0.2em; border-radius: 0.4em; }
+      h1, h2, h3 { font-family: "Montserrat", sans-serif; }
+      h3 small { color: #666; }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      td.first, th.first {
+        font-weight: bold;
+        text-align: right;
+      }
+
+      td, th {
+        padding: 0.5em 1em;
+      }
+
+      td:not(.first) {
+        border: 0.2em solid;
+      }
+
+      @media (min-width: 800px) {
+        .container { width: 60%; }
+      }
+
+      @media (max-width: 800px) {
+        td, th {
+          padding: 0.2em 0.4em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Discord Bots survey results</h1>
+      <p>These are the results from the survey we held recently, plus some selected results from the old (March 2017) survey whose results were never published before. The results are just for informational purposes right now; we will be making changes over time based on them. If you want to make a specific point based on something you read here (or if you want to suggest some other chart/correlation to be included), DM me at meew0#9811</p>
+      <p>There were 99 responses in total to the new survey, and 227 to the old one. The total number of people who answered a particular question is specified with each question. "Other" answers are not always included in pie charts, so the sum of answers in a pie chart may not correspond 100% to the number of responses.</p>
+      <p>Also, a general note about the questions: most of the questions from the new survey, especially the demographic ones, were initially written by Roadcrosser, with the other mods making improvements later on. The survey was only sent out after all mods gave their approval. The old survey questions were basically only written by myself.</p>
+      <h2>General questions about the server</h2>
+      <h3>About <code>#information</code> vs. <code>#bot-list</code> <small>(93 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="informationVsBotList" width="400" height="400"></canvas></div></div>
+      <p>A divisive issue: a slight majority of people are fine with the current setup. Those who want the channels to be rewritten seem to prefer them being merged, though. Other notable opinions:
+        <ul>
+          <li>A few people wanted <code>#bot-list</code> to be merged into <code>#newspaper</code>, which I guess makes sense as <code>#bot-list</code> is also an announcement channel nowadays.</li>
+          <li>Some people specifically critiqued the information in the channels as being outdated (e.g. on selfbots).</li>
+        </ul>
+      </p>
+      <h3>Lack of explicitly defined rules <small>(38 responses)</small></h3>
+      <p>
+        This question was specifically not a question where answers could be selected, because I wanted the people who felt strongly about this issue to provide reasoning why they think so. A surprising (to me) amount of people answered this question. A quick estimate shows that 22 answers were generally positive of the current system, 12 answers were generally negative, and 4 answers were neutral or off-topic. Several of the negative answers didn't provide much reasoning beyond "other servers do it this way, so we should too", which is what I feared would happen. Although, many positive answers didn't provide a reasoning either. Arguments given against the current system include:
+        <ul>
+          <li>Giving the moderators freedom may lead to abuse and arbitrariness (although several people say this is not as much of an issue on DBots as it is on other servers they know)</li>
+          <li>People cannot always be trusted to behave according to common sense, or may use the lack of rules as an excuse for anarchy</li>
+          <li>It is annoying when people ask about specific situations, or those situations have to be explained to them</li>
+        </ul>
+        Arguments given for the current system include:
+        <ul>
+          <li>Giving the moderators freedom leads to tolerance for situations that would be considered OK but would be forbidden by the rules. (One example given here was people talking in foreign languages as a joke, for a short time)</li>
+          <li>Rules cannot cover every situation, and people will find loopholes in the rules or use the lack of specific rules as an excuse to do those things, even if they would not be considered OK</li>
+          <li>People can usually be trusted to behave according to common sense</li>
+          <li>People who plan to misbehave wouldn't read the rules anyway</li>
+        </ul>
+        Overall, while there were negative responses, it seems like there isn't a huge push to change the status quo. Another suggested solution was having explicit rules like "Use common sense" and "Moderators' say is final".
+      </p>
+      <h3>About <code>#newspaper</code> <small>(93 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="newspaper" width="400" height="400"></canvas></div></div>
+      <p>
+        I was initially opposed to <code>#newspaper</code>, but enough people think that a channel for not-as-important announcements is warranted that we will most likely keep it. Other notable opinions:
+        <ul>
+          <li>Some people suggested renaming it to <code>#announcements</code> to reflect its purpose more clearly. I think this is not a good idea as then people may think there is no <i>other</i> channel for more important announcements, and will only pay attention to <code>#newspaper</code></li>
+          <li>Some people took issue with unprofessionalism in <code>#newspaper</code> (e.g. road's presidential alerts), and/or wanted a clear format for announcements.</li>
+          <li>One person suggested pinging people more for announcements</li>
+        </ul>
+      </p>
+      <h3>About the testing channels <small>(92 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="testing" width="400" height="400"></canvas></div></div>
+      <p>
+        Pretty clear situation, most people think the current number of testing channels is fine. I see no need for change here.
+      </p>
+      <h3>About the voice channels <small>(94 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-12 col-md-9 col-lg-6"><canvas id="voice" width="400" height="200"></canvas></div></div>
+      <p>
+        This situation is not as clear as the testing channels. Many people think there are too many testing voice channels. Several people also specifically noted that they don't care about the voice channels, which is probably understandable. Other concerns noted:
+        <ul>
+          <li>Several people specifically wanted more music voice channels, including ones that are limited to certain "verified music bots".</li>
+          <li>Several people also noted that there is not much of a difference in usage between testing and music VCs.</li>
+          <li>One person wanted voice activity to be enabled in the general VC; others also wanted more general voice channels for concurrent conversations.</li>
+          <li>Some people proposed a mechanism where testing voice channels are automatically cleared out after some time.</li>
+        </ul>
+        In general, there is no clear course of action here. The current situation doesn't appear to be terrible, but there could still be changes.
+      </p>
+      <h3>About <code>#find-a-bot</code> and <code>#development</code> <small>(93 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="auxiliary" width="400" height="400"></canvas></div></div>
+      <p>Nothing to be done here, really. Most of the "other" answers consisted of people noting their indifference; several people also praised <code>#find-a-bot</code> specifically for being very useful. <code>#development</code> was occasionally noted as being a bit slow to get responses from.</p>
+      <h3>New <code>#general</code> without bots <small>(91 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="general" width="400" height="400"></canvas></div></div>
+      <p>This is a divisive issue again. The reason we have been historically reluctant to make this move is that the server revolves around discussion of bots, and there would be little point in such a discussion if there is no way to quickly refer to a specfiic bot by using it. Only recently was <code>#find-a-bot</code> changed to not allow most bots. I don't see a very clear course of action here either. Most of the "other" section consisted of indifference again.</p>
+      <h3>Mod coverage in your time zone <small>(90 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="modCoverage" width="400" height="400"></canvas></div></div>
+      <p><i>Note:</i> I collected all "Other" answers that noted differing coverage based on time of day or other factors into a "So/so" category.</p>
+      <p>All people who answered "Bad" and specified their time zone later on (11 people) were in the eastern hemisphere (positive time zones). Most commonly this was UTC+3 (four people) and adjacent time zones (six people in total). Three people also answered "Bad" in the +10/+11 time zones. One person in UTC+5:30 and one person in UTC+7 also answered "Bad".</p>
+      <h3>Other suggestions <small>(32 responses)</small></h3>
+      <p>
+        Many people suggested things here which they already noted in an "Other" field above. Apart from those, notes people made include:
+        <ul>
+          <li>Several people criticised the site version v2 not being available yet.</li>
+          <li>One person wanted instructions for how to check whether a bot is in the queue to be provided.</li>
+          <li>Several people complained about the slow verification time.</li>
+          <li>One person actually wanted <i>more</i> memeing in <code>#newspaper</code>, unlike some of the respondents above.</li>
+          <li>One person suggested a system where misbehaving bots that don't create emergencies are "flagged" and will appear in an internal channel, and mods will occasionally look into that channel and deal with those bots.</li>
+          <li>Several people suggested different systems for bot devs being made more aware for their work, like having a channel where specific bots are featured, and some sort of certification program.</li>
+          <li>One person wanted to get rid of <code>#ultimate-shitposting</code>, as there are too many bots for it to be useful.</li>
+        </ul>
+        Some people also suggested more or less harsh moderation in reference to specific situations; we'll look into those. (If you have a specific complaint, feel free to DM me)
+      </p>
+
+      <h2>Mod ratings</h1>
+      39 people rated the mods.
+      <h3>Graph</h2>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><canvas id="modRatings" width="400" height="400"></canvas></div></div>
+      <h3>Mods' strong and weak points</h2>
+      <p>What each category means:
+        <ol>
+          <li style="list-style-type: '[1] '">Interacts with the community</li>
+          <li style="list-style-type: '[2] '">Makes improvements to the server</li>
+          <li style="list-style-type: '[3] '">Makes fair and unbiased decisions</li>
+          <li style="list-style-type: '[4] '">Is available for moderation actions</li>
+          <li style="list-style-type: '[5] '">Makes me feel safe</li>
+        </ol>
+      </p>
+      <div class="row center-xs">
+        <table class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+          <tr><th class="first">Mod</th><th>[1]</th><th>[2]</th><th>[3]</th><th>[4]</th><th>[5]</th></tr>
+          <tr><td class="first">meew0</td><td style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 1);">2.5625</td><td style="color: #fff; background-color: rgba(0, 0, 0, 0.9767272727); border-color: rgba(0, 0, 0, 1);">3.9091</td><td style="color: #fff; background-color: rgba(0, 0, 0, 1); border-color: rgba(0, 0, 0, 1);">3.9412</td><td style="background-color: rgba(0, 0, 0, 0.3853333333); border-color: rgba(0, 0, 0, 1);">3.0938</td><td style="color: #fff; background-color: rgba(0, 0, 0, 0.872); border-color: rgba(0, 0, 0, 1);">3.7647</td></tr>
+          <tr><td class="first">Danny</td><td style="background-color: rgba(230, 153, 0, 0); border-color: rgba(230, 153, 0, 1);">2.6471</td><td style="background-color: rgba(230, 153, 0, 0.1345454545); border-color: rgba(230, 153, 0, 1);">2.7714</td><td style="background-color: rgba(230, 153, 0, 1); border-color: rgba(230, 153, 0, 1);">3.5714</td><td style="background-color: rgba(230, 153, 0, 0.7536931818); border-color: rgba(230, 153, 0, 1);">3.3438</td><td style="background-color: rgba(230, 153, 0, 0.9527777778); border-color: rgba(230, 153, 0, 1);">3.5278</td></tr>
+          <tr><td class="first">Erisa</td><td style="background-color: rgba(89, 179, 230, 1); border-color: rgba(89, 179, 230, 1);">4.1143</td><td style="background-color: rgba(89, 179, 230, 0); border-color: rgba(89, 179, 230, 1);">3.4722</td><td style="background-color: rgba(89, 179, 230, 0.1348796626); border-color: rgba(89, 179, 230, 1);">3.5588</td><td style="background-color: rgba(89, 179, 230, 0.7330037083); border-color: rgba(89, 179, 230, 1);">3.9429</td><td style="background-color: rgba(89, 179, 230, 0.5471533484); border-color: rgba(89, 179, 230, 1);">3.8235</td></tr>
+          <tr><td class="first">Googie</td><td style="background-color: rgba(242, 230, 64, 1); border-color: rgba(242, 230, 64, 1);">3.7647</td><td style="background-color: rgba(242, 230, 64, 0.454674221); border-color: rgba(242, 230, 64, 1);">3.4412</td><td style="background-color: rgba(242, 230, 64, 0.2563739377); border-color: rgba(242, 230, 64, 1);">3.3235</td><td style="background-color: rgba(242, 230, 64, 0); border-color: rgba(242, 230, 64, 1);">3.1714</td><td style="background-color: rgba(242, 230, 64, 0.2889518414); border-color: rgba(242, 230, 64, 1);">3.3429</td></tr>
+          <tr><td class="first">jagrosh</td><td style="background-color: rgba(0, 153, 128, 0); border-color: rgba(0, 153, 128, 1);">2.8857</td><td style="background-color: rgba(0, 153, 128, 0.6005888126); border-color: rgba(0, 153, 128, 1);">3.3714</td><td style="background-color: rgba(0, 153, 128, 1); border-color: rgba(0, 153, 128, 1);">3.6944</td><td style="background-color: rgba(0, 153, 128, 0.4322576921); border-color: rgba(0, 153, 128, 1);">3.2353</td><td style="background-color: rgba(0, 153, 128, 0.8626104024); border-color: rgba(0, 153, 128, 1);">3.5833</td></tr>
+          <tr><td class="first">Roadcrosser</td><td style="background-color: rgba(204, 102, 0, 1); border-color: rgba(204, 102, 0, 1);">3.9444</td><td style="background-color: rgba(204, 102, 0, 0.3114186851); border-color: rgba(204, 102, 0, 1);">3.2941</td><td style="background-color: rgba(204, 102, 0, 0.06050420168); border-color: rgba(204, 102, 0, 1);">3.0571</td><td style="background-color: rgba(204, 102, 0, 0.7260504202); border-color: rgba(204, 102, 0, 1);">3.6857</td><td style="background-color: rgba(204, 102, 0, 0); border-color: rgba(204, 102, 0, 1);">3.0000</td></tr>
+          <tr><td class="first">spoopy</td><td style="background-color: rgba(0, 115, 179, 0); border-color: rgba(0, 115, 179, 1);">2.4412</td><td style="background-color: rgba(0, 115, 179, 0.3184449959); border-color: rgba(0, 115, 179, 1);">2.7647</td><td style="background-color: rgba(0, 115, 179, 1); border-color: rgba(0, 115, 179, 1);">3.4571</td><td style="background-color: rgba(0, 115, 179, 0.4937965261); border-color: rgba(0, 115, 179, 1);">2.9429</td><td style="background-color: rgba(0, 115, 179, 0.6947890819); border-color: rgba(0, 115, 179, 1);">3.1471</td></tr>
+          <tr><td class="first">stupid cat</td><td style="background-color: rgba(204, 153, 179, 1); border-color: rgba(204, 153, 179, 1);">4.1944</td><td style="background-color: rgba(204, 153, 179, 0.344773791); border-color: rgba(204, 153, 179, 1);">3.8611</td><td style="background-color: rgba(204, 153, 179, 0.112324493); border-color: rgba(204, 153, 179, 1);">3.7429</td><td style="background-color: rgba(204, 153, 179, 0.399375975); border-color: rgba(204, 153, 179, 1);">3.8889</td><td style="background-color: rgba(204, 153, 179, 0); border-color: rgba(204, 153, 179, 1);">3.6857</td></tr>
+          <tr><td class="first">Zeta</td><td style="background-color: rgba(74, 0, 255, 0); border-color: rgba(74, 0, 255, 1);">1.8857</td><td style="background-color: rgba(74, 0, 255, 0.1841563786); border-color: rgba(74, 0, 255, 1);">2.0278</td><td style="color: #fff; background-color: rgba(74, 0, 255, 1); border-color: rgba(74, 0, 255, 1);">2.6571</td><td style="background-color: rgba(74, 0, 255, 0.07613168724); border-color: rgba(74, 0, 255, 1);">1.9444</td><td style="background-color: rgba(74, 0, 255, 0.7777777778); border-color: rgba(74, 0, 255, 1);">2.4857</td></tr>
+        </table>
+      </div>
+      <p>Interestingly, whether the mod interacts with the community is always either their strongest or their weakest point.</p>
+      <h3>Strong and weak mods in each category</h2>
+      <div class="row center-xs">
+        <table class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+          <tr><th class="first">Mod</th><th>[1]</th><th>[2]</th><th>[3]</th><th>[4]</th><th>[5]</th></tr>
+          <tr><td class="first">meew0</td><td style="background-color: rgba(0, 0, 0, 0.2931419732); border-color: rgba(0, 0, 0, 1);">2.5625</td><td style="background-color: rgba(230, 153, 0, 1); border-color: rgba(230, 153, 0, 1);">3.9091</td><td style="background-color: rgba(89, 179, 230, 1); border-color: rgba(89, 179, 230, 1);">3.9412</td><td style="background-color: rgba(242, 230, 64, 0.5751092137); border-color: rgba(242, 230, 64, 1);">3.0938</td><td style="background-color: rgba(0, 153, 128, 0.9560301508); border-color: rgba(0, 153, 128, 1);">3.7647</td></tr>
+          <tr><td class="first">Danny</td><td style="background-color: rgba(0, 0, 0, 0.3297676582); border-color: rgba(0, 0, 0, 1);">2.6471</td><td style="background-color: rgba(230, 153, 0, 0.395282838); border-color: rgba(230, 153, 0, 1);">2.7714</td><td style="background-color: rgba(89, 179, 230, 0.7120418848); border-color: rgba(89, 179, 230, 1);">3.5714</td><td style="background-color: rgba(242, 230, 64, 0.7002084988); border-color: rgba(242, 230, 64, 1);">3.3438</td><td style="background-color: rgba(0, 153, 128, 0.7789293691); border-color: rgba(0, 153, 128, 1);">3.5278</td></tr>
+          <tr><td class="first">Erisa</td><td style="background-color: rgba(0, 0, 0, 0.965280165); border-color: rgba(0, 0, 0, 1); color: #fff;">4.1143</td><td style="background-color: rgba(230, 153, 0, 0.7677852349); border-color: rgba(230, 153, 0, 1);">3.4722</td><td style="background-color: rgba(89, 179, 230, 0.7022251309); border-color: rgba(89, 179, 230, 1);">3.5588</td><td style="background-color: rgba(242, 230, 64, 1); border-color: rgba(242, 230, 64, 1);">3.9429</td><td style="background-color: rgba(0, 153, 128, 1); border-color: rgba(0, 153, 128, 1);">3.8235</td></tr>
+          <tr><td class="first">Googie</td><td style="background-color: rgba(0, 0, 0, 0.8138636685); border-color: rgba(0, 0, 0, 1); color: #fff;">3.7647</td><td style="background-color: rgba(230, 153, 0, 0.7512830636); border-color: rgba(230, 153, 0, 1);">3.4412</td><td style="background-color: rgba(89, 179, 230, 0.5189790576); border-color: rgba(89, 179, 230, 1);">3.3235</td><td style="background-color: rgba(242, 230, 64, 0.6139793487); border-color: rgba(242, 230, 64, 1);">3.1714</td><td style="background-color: rgba(0, 153, 128, 0.6407035176); border-color: rgba(0, 153, 128, 1);">3.3429</td></tr>
+          <tr><td class="first">jagrosh</td><td style="background-color: rgba(0, 0, 0, 0.4331385356); border-color: rgba(0, 0, 0, 1);">2.8857</td><td style="background-color: rgba(230, 153, 0, 0.7142090125); border-color: rgba(230, 153, 0, 1);">3.3714</td><td style="background-color: rgba(89, 179, 230, 0.8078461315); border-color: rgba(89, 179, 230, 1);">3.6944</td><td style="background-color: rgba(242, 230, 64, 0.6459374854); border-color: rgba(242, 230, 64, 1);">3.2353</td><td style="background-color: rgba(0, 153, 128, 0.8204564489); border-color: rgba(0, 153, 128, 1);">3.5833</td></tr>
+          <tr><td class="first">Roadcrosser</td><td style="background-color: rgba(0, 0, 0, 0.8917153661); border-color: rgba(0, 0, 0, 1); color: #fff;">3.9444</td><td style="background-color: rgba(230, 153, 0, 0.6731148835); border-color: rgba(230, 153, 0, 1);">3.2941</td><td style="background-color: rgba(89, 179, 230, 0.3115183246); border-color: rgba(89, 179, 230, 1);">3.0571</td><td style="background-color: rgba(242, 230, 64, 0.8713264496); border-color: rgba(242, 230, 64, 1);">3.6857</td><td style="background-color: rgba(0, 153, 128, 0.3844221106); border-color: rgba(0, 153, 128, 1);">3.0000</td></tr>
+          <tr><td class="first">spoopy</td><td style="background-color: rgba(0, 0, 0, 0.2405920773); border-color: rgba(0, 0, 0, 1);">2.4412</td><td style="background-color: rgba(230, 153, 0, 0.3917094355); border-color: rgba(230, 153, 0, 1);">2.7647</td><td style="background-color: rgba(89, 179, 230, 0.6230366492); border-color: rgba(89, 179, 230, 1);">3.4571</td><td style="background-color: rgba(242, 230, 64, 0.4996028594); border-color: rgba(242, 230, 64, 1);">2.9429</td><td style="background-color: rgba(0, 153, 128, 0.4943467337); border-color: rgba(0, 153, 128, 1);">3.1471</td></tr>
+          <tr><td class="first">stupid cat</td><td style="background-color: rgba(0, 0, 0, 1); border-color: rgba(0, 0, 0, 1); color: #fff;">4.1944</td><td style="background-color: rgba(230, 153, 0, 0.9744966443); border-color: rgba(230, 153, 0, 1);">3.8611</td><td style="background-color: rgba(89, 179, 230, 0.8455497382); border-color: rgba(89, 179, 230, 1);">3.7429</td><td style="background-color: rgba(242, 230, 64, 0.97299444); border-color: rgba(242, 230, 64, 1);">3.8889</td><td style="background-color: rgba(0, 153, 128, 0.8969849246); border-color: rgba(0, 153, 128, 1);">3.6857</td></tr>
+          <tr><td class="first">Zeta</td><td style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 1);">1.8857</td><td style="background-color: rgba(230, 153, 0, 0); border-color: rgba(230, 153, 0, 1);">2.0278</td><td style="background-color: rgba(89, 179, 230, 0); border-color: rgba(89, 179, 230, 1);">2.6571</td><td style="background-color: rgba(242, 230, 64, 0); border-color: rgba(242, 230, 64, 1);">1.9444</td><td style="background-color: rgba(0, 153, 128, 0); border-color: rgba(0, 153, 128, 1);">2.4857</td></tr>        </table>
+      </div>
+      <p>This is the same data as above, but the highlighting is per–column instead of per–row.</p>
+      <h3>Comments</h2>
+      <p>The comments for each mod pretty much reflect their ratings, and there were no particularly interesting or funny ones, so I'm skipping a detailed analysis of the comments for each mod here. Some users noted specific situations in which a mod did things wrong; if you sent one of those in and want the situation to be looked into more than just the mod being made aware of the comment, please DM me (meew0#9811) with detailed information, proof, etc.</p>
+      <h2>Final comments</h1>
+      <p>
+        There were a great variety of comments sent in here. Some highlights:
+        <ul>
+          <li>One person said it was bad to rate the moderators. While I was also concerned about this initially, it was actually one of the mods who suggested it this time, and the others were fine with it. The mods are definitely professional enough to handle bad ratings! While I agree that in an ideal world the mods would just be equal to normal users except with permissions, in practicality it's useful to do things like this in order to improve the situation even more.</li>
+          <li>Thanks to the people who took their time to write out paragraphs of critique; I genuinely appreciate this!</li>
+          <li>Many people commented on v2 not being available yet, or the website needing an overhaul in general.</li>
+          <li>Some people complained about specific moderation decisions and other specific problems; if you want them to be looked into further, DM me (same as above)</li>
+          <li>A few people complained about the style of the server, in that it is too weeaboo-y, too NSFW, too cutesy, etc. If you think something specific is NSFW please ping the mods about it when it happens; if the other things annoy you to a point where you can't be active on the server, then it probably isn't for you...</li>
+          <li>Many other people said the community is great! So if you are one of the people contributing to the above (except NSFW) don't feel bad about it</li>
+          <li>To the person who sent in "person reading this cute": thanks :) I guess that goes equally for the person reading <i>this</i>!</li>
+        </ul>
+      </p>
+      <h2>Demographics</h1>
+      <h3>Initial question ("check all that apply") <small>(87 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-12 col-md-9 col-lg-6"><canvas id="demoInitial" width="400" height="200"></canvas></div></div>
+      <p>
+        <ol>
+          <li style="list-style-type: '[1] '">One or more bots you own is in the verification queue</li>
+          <li style="list-style-type: '[2] '">One or more bots you own has been verified and is in the server</li>
+          <li style="list-style-type: '[3] '">You have been added as a developer for another bot.</li>
+          <li style="list-style-type: '[4] '">You have the Bot Developer role.</li>
+        </ol>
+      </p>
+      <h3>Age on the server <small>(96 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="serverAge" width="400" height="400"></canvas></div></div>
+      <p>Not entirely unsurprisingly, most people who answered the survey were already here for a while. What's interesting is that "Several days" is a larger category than "Several weeks", suggesting that people sometimes leave again after being here for some days.</p>
+      <h3>Age <small>(95 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="age" width="400" height="400"></canvas></div></div>
+      <p>The 13-24 age bracket clearly dominates the server. Out of "other", two people were between 25 and 34 years old, one between 35 and 44, and one 45 years or older. One person claimed to be 12 or younger, which would make it illegal for them to be on Discord (this was noted in the question). I would honestly have expected more people to choose that as a meme, but I'm glad people were apparently mostly serious here :)</p>
+      <h3>Life status <small>(old survey, 218 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="lifeStatus" width="400" height="400"></canvas></div></div>
+      <p>The old survey had a question "Which of these applies to you?", with the four categories from the pie chart, as well as an "Other" text entry. What's very interesting is that the "Student (pre-college)" category here matches up nearly exactly with the 13-17 age range above. While the old survey did have an age question, the possible selections were different so it's not really feasible to directly compare the two. "Other" highlights from this question:
+        <ul>
+          <li>One person attended university and high school at the same time, while also being employed as a software engineer.</li>
+          <li>"Manager transport" (???)</li>
+          <li>"Porn star"</li>
+          <li>One person, who was not me, entered "meew zero". Obviously, everyone strives to finally reach the "meew zero" stage of life!</li>
+        </ul>
+      </p>
+      <h3>Gender <small>(91 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="gender" width="400" height="400"></canvas></div></div>
+      <p>Interestingly, one person updated their gender to "Female" some time into the survey. If that was due to a transition, congratulations!</p>
+      <p>Full, unprocessed, list of other specified genders (each one chosen by one person):
+        <ul>
+          <li><i>¯\_(ツ)_/¯</i></li>
+          <li><i>Sausage</i></li>
+          <li><i>Apache Helicopter</i></li>
+          <li><i>Giraffe</i></li>
+          <li><i>Hexcode</i></li>
+          <li><i>Genderfluid</i></li>
+          <li><i>Genderless or "fluid"</i></li>
+          <li><i>nb</i></li>
+          <li><i>i want to be a girl</i></li>
+          <li><i>trans</i></li>
+        </ul>
+      </p>
+      <h3>Do you identify as LGBTQ+? <small>(94 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="lgbt" width="400" height="400"></canvas></div></div>
+      <p>According to <a href="http://www.lgbtdata.com/uploads/1/0/8/8/10884149/gates_gallup_special_report.docx">Gates et al., 2012 (doc link)</a>, 3.4% of US adults identify as LGBT, with 92.2% not identifying as LGBT, and the rest not answering or being unsure. Not surprisingly, many more people identifying as LGBTQ+ are on the server, with over 25% of people answering "Yes". (Of course, the question asked was a bit different)</p>
+      <h3>Bonus correlation: LGBTQ+ by gender</h3>
+      <div class="row center-xs">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="lgbtMale" width="400" height="400"></canvas>Male</div>
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="lgbtFemale" width="400" height="400"></canvas>Female</div>
+      </div>
+      <h3>Timezones <small>(85 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-8"><canvas id="timezones" width="400" height="200"></canvas></div></div>
+      <p>I tried to parse the freeform input into UTC offsets as well as I could. I tried to account for DST wherever possible, as it was still (or not yet) DST in many areas when the survey started. All values now are non-DST.</p>
+      <h3>Where do you live? <small>(89 responses)</small></h3>
+      <div class="row center-xs">
+        <div class="col-xs-12 col-sm-10 col-md-7 col-lg-5"><canvas id="locOverall" width="400" height="400"></canvas></div>
+      </div>
+      <div class="row center-xs">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="locAmerica" width="400" height="400"></canvas>America</div>
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="locEurope" width="400" height="400"></canvas>Europe</div>
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="locAustralasia" width="400" height="400"></canvas>Australasia</div>
+      </div>
+      <h3>Native languages <small>(old survey, 218 responses)</small></h3>
+      <div class="row center-xs middle-xs">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="languages" width="400" height="400"></canvas></div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-6"><canvas id="languagesBar" width="400" height="250"></canvas>Other languages</div>
+      </div>
+      <p>The old survey had a free-form question on peoples' native languages, which I sorted into categories. Dutch is listed on both charts, for comparison. "Misc." includes unintelligible answers and ones that are not languages (e.g. "Martian").</p>
+      <h3>Do you watch anime? <small>(97 responses)</small></h3>
+      <div class="row center-xs">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="anime" width="400" height="400"></canvas>New survey</div>
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="animeOld" width="400" height="400"></canvas>Old survey</div>
+      </div>
+      <p>Very close call here! There appears to be no significant difference between the two surveys, either. Interestingly, in the new survey, the percentage of people who watch anime became smaller and smaller as the survey went on, suggesting that people who notice the survey earlier are more likely to watch anime.</p>
+      <h3>Bonus anime correlations</h3>
+      <div class="row center-xs">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><canvas id="animeCorrelations" width="400" height="100"></canvas></div>
+      </div>
+      <h3>Activity level and anime (old survey)</h3>
+      <div class="row center-xs">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="activity" width="400" height="400"></canvas></div>
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="activityAnime" width="400" height="400"></canvas></div>
+      </div>
+      <p>In the old survey, people were asked to rate their activity level from 1 to 5. The overall activity stats are summed up in the left chart. On the right chart, the outer ring shows the activity levels of people who <i>don't</i> watch anime, and the inner chart shows the activity levels of those who do. There is no overall correlation, but it appears that watching anime makes you more likely to be very active, and less likely to be somewhat inactive.</p>
+      <h3>Cutest user on the server <small>(83 responses)</small></h3>
+      <div class="row center-xs middle-xs">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="cutest" width="400" height="400"></canvas></div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-6"><canvas id="cutestBar" width="400" height="200"></canvas>Users who were mentioned more than once</div>
+      </div>
+      <p>I categorised the free form responses into six categories. "Other" includes people complaining about the question, "yes" (3 responses), variations on "don't know", and miscellaneous ones (including unintelligible responses). None of the other categories are exact, I tried to interpret how it was meant. For example, one person submitted an eval command (<code>lily pls eval ", ".join(map(str, guild.members))</code>) which I interpreted as "everyone". Some people mentioned more than one specific user in their answer; the answer was counted as one instance of "Specific user", however all mentioned users were counted in the per-user statistics. Users who were mentioned exactly once (hey, better than not at all!):
+        <ul>
+          <li>Roadcrosser</li>
+          <li>Lucina#1801</li>
+          <li>ComputerMasterist</li>
+          <li>Ghosty</li>
+          <li>meew0</li>
+          <li>TessuDa!</li>
+          <li>ListBoat</li>
+          <li>Parallax</li>
+          <li>CinnamonKiwi</li>
+          <li>smileyface12349#5377</li>
+          <li>Googie</li>
+          <li>Gnar Bot</li>
+          <li>Snazzah</li>
+          <li>AlexFlipnote</li>
+          <li>haha yes#1616</li>
+          <li>Ferchy</li>
+          <li>fernandopal</li>
+          <li>Vap0r1ze</li>
+          <li>LewisTehMinerz</li>
+          <li>JackTEK#6669</li>
+          <li>vasker</li>
+          <li>abalabahaha#0124</li>
+          <li>Drios.,#0001</li>
+          <li>Miko</li>
+          <li>[TG/LW] Caramel#5861</li>
+        </ul>
+        Discriminators that were mentioned in the original entry were kept in place.
+      </p>
+      <h3>When do you brush your teeth? <small>(92 responses)</small></h3>
+      <div class="row center-xs middle-xs">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-6"><canvas id="oralHygiene" width="400" height="200"></canvas></div>
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="oralHygienePie" width="400" height="400"></canvas></div>
+      </div>
+      <p>
+        The first chart shows people's answers directly; the second one shows the association between brushing in the morning and brushing in the evening. I am honestly surprised at how many people don't brush their teeth! I thought that was something everyone just did by default. All the "Other" answers (each selected once), unedited, with my annotations in italics:
+        <ul>
+          <li>7</li>
+          <li>before sleeping</li>
+          <li>haha yes here my credit card number 5157895475 10/21 555 <i>(before you freak out, that is clearly not an actual credit card number)</i></li>
+          <li>I'd prefer not to say</li>
+          <li>:^)</li>
+          <li>My brain has failed to identify the relevancy of this question</li>
+          <li>Uhh, do you need to know this XD</li>
+          <li>What are teeth</li>
+          <li>When I think about it.</li>
+          <li>Whenever it's time</li>
+          <li>you can't wash teeth stupid</li>
+          <li>When i smell it and i almost vomit. <i>(this person also selected "Morning")</i></li>
+          <li>could be any time before a sleep</li>
+          <li>While hanging upside down</li>
+          <li>ty for caring about our hygiene</li>
+        </ul>
+      </p>
+      <h3>Do you still like the current server icon? <small>(98 responses)</small></h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="serverIcon" width="400" height="400"></canvas></div></div>
+      <p>The icons, for reference (only the new icon was provided in the question):</p>
+      <div class="row center-xs">
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+          <img src="https://i.imgur.com/R9xY9eO.png">
+          Old server icon
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+          <img src="https://i.imgur.com/sMDEGsH.png">
+          New server icon
+        </div>
+      </div>
+      <p>I'm not sure whether people understood "What old one?" as "I don't like the new one but what was the old one?" or "I like the new one but what was the old one?" here — it was supposed to be the former. In hindsight, perhaps the question could have been phrased better. Regardless, it seems like a majority of people still like the new icon.</p>
+      <h3>Bonus correlation: Server ages of people who don't remember the old icon</h3>
+      <div class="row center-xs"><div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="serverIconAges" width="400" height="400"></canvas></div></div>
+      <p>The overall distribution of server ages is in the center for comparison; the outside ring is the correlation in question.</p>
+      <p>As expected, of the people who don't remember the old icon, a smaller fraction are over a year old. However the effect is not as strong as I was expecting, which means there are less people left from the original days than I thought. Also, two people who claim to have joined only several days ago say they preferred the old icon over the new one, which makes no sense as they couldn't have been exposed to the old icon. (Perhaps they misunderstood the question to relate to the Halloween event icon?)</p>
+      <h3>Miscellaneous Discord-related questions <small>(old survey, all questions had 223 responses)</small></h3>
+      <div class="row center-xs">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="betterDiscord" width="400" height="400"></canvas>"Do you use BetterDiscord?"</div>
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="beautifulDiscord" width="400" height="400"></canvas>"Do you use BeautifulDiscord?"</div>
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="selfbot" width="400" height="400"></canvas>"Do you have a selfbot?"</div>
+      </div>
+      <p>Remember, this question was asked in March of 2017; I would assume the percentages have changed significantly since then.</p>
+      <h3>BetterDiscord/BeautifulDiscord correlations <small>(old survey)</small></h3>
+      <div class="row center-xs" style="margin-top: 2em;">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="betterDiscordJudged" width="400" height="400"></canvas>"Do you use BetterDiscord?", only answers from people who use BeautifulDiscord</div>
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="beautifulDiscordJudged" width="400" height="400"></canvas>"Do you use BeautifulDiscord?", only answers from people who use BetterDiscord</div>
+      </div>
+      <h3>Software development questions <small>(old survey, 227 responses)</small></h3>
+      <div class="row center-xs">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="dev" width="400" height="400"></canvas>"Do you ever do any software development?"</div>
+      </div>
+      <p>The following questions were only answered by people who answered "Yes" to the above question.</p>
+      <div class="row center-xs">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: 3em"><canvas id="devHours" width="800" height="200"></canvas>"How many hours a week do you code on average?"</div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: 3em"><canvas id="devHoursZoomed" width="800" height="200"></canvas>"How many hours a week do you code on average?" (zoomed on 0-40 range)</div>
+      </div>
+      <div class="row center-xs" style="margin-top: 3em">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="devPleasant" width="400" height="400"></canvas>"Would you say that, overall, software development is something pleasant to do?"</div>
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4"><canvas id="devMore" width="400" height="400"></canvas>"Would you do more software development if you had the chance?"</div>
+      </div>
+      <h2>Final thoughts</h2>
+      <p>That is it for the survey evaluation! Sorry that the evaluation for the old survey is so late. There really is no excuse here, I just forgot. If you have any other thoughts or comments, including suggestions for more correlations, suggestions for other data points to evaluate from the old survey (there were some more free form questions that weren't as easy to categorise, and other questions), and anything else, let me know by DMing me at meew0#9811. As I mentioned at the start, we will consider all these data points and take action based on them eventually. Thanks for reading!</p>
+      <p><a href="https://survey-evaluation.is-serious.business/ef0603.jpg">Super bonus picture: my handwritten statistics on timezones and cute users</a></p>
+    </div>
+    <script>
+    // http://jfly.iam.u-tokyo.ac.jp/color/
+    // The last colour is custom
+    var okabeIto2002Palette = [
+      'rgba(0, 0, 0, 1)',
+      'rgba(230, 153, 0, 1)',
+      'rgba(89, 179, 230, 1)',
+      'rgba(242, 230, 64, 1)',
+      'rgba(0, 153, 128, 1)',
+      'rgba(204, 102, 0, 1)',
+      'rgba(0, 115, 179, 1)',
+      'rgba(204, 153, 179, 1)',
+      'rgba(74, 0, 255, 1)'
+    ];
+    var okabeIto2002Palette20PercentAlpha = [
+      'rgba(0, 0, 0, 0.2)',
+      'rgba(230, 153, 0, 0.2)',
+      'rgba(89, 179, 230, 0.2)',
+      'rgba(242, 230, 64, 0.2)',
+      'rgba(0, 153, 128, 0.2)',
+      'rgba(204, 102, 0, 0.2)',
+      'rgba(0, 115, 179, 0.2)',
+      'rgba(204, 153, 179, 0.2)',
+      'rgba(74, 0, 255, 0.2)'
+    ];
+    var dashes = [
+      [],
+      [],
+      [],
+      [20, 10],
+      [20, 10],
+      [20, 10],
+      [5, 2],
+      [5, 2],
+      [5, 2]
+    ]
+
+    var gradedPalette = [
+      "#ccc",
+      "#999",
+      "#666",
+      "#333",
+      "#000"
+    ]
+
+    // modified from https://stackoverflow.com/a/37260662/4230639
+    var quinceTooltipOptions = {
+      tooltips: {
+        callbacks: {
+          afterLabel: function(tooltipItem, data) {
+            //get the concerned dataset
+            var dataset = data.datasets[tooltipItem.datasetIndex];
+            //calculate the total of this data set
+            var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+              return previousValue + currentValue;
+            });
+            //get the current items value
+            var currentValue = dataset.data[tooltipItem.index];
+            //calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
+            var percentage = Math.floor(((currentValue/total) * 100)+0.5);
+
+            return percentage + "%";
+          }
+        }
+      }
+    };
+
+    function pieChart(id, labels, data, palette) {
+      if(palette == null) palette = okabeIto2002Palette;
+      return new Chart(document.getElementById(id), {
+        type: 'pie',
+        options: quinceTooltipOptions,
+        data: {
+          labels: labels,
+          datasets: [{
+            data: data,
+            backgroundColor: palette
+          }]
+        }
+      });
+    }
+
+    function barChart(id, labels, data) {
+      return new Chart(document.getElementById(id), {
+        type: 'horizontalBar',
+        options: {
+          legend: { display: false },
+          scales: { xAxes: [{ ticks: { beginAtZero: true } } ] }
+        },
+        data: {
+          labels: labels,
+          datasets: [{
+            label: "",
+            data: data,
+            backgroundColor: okabeIto2002Palette
+          }]
+        }
+      });
+    }
+
+    pieChart("informationVsBotList",
+      ["They're fine as is", "They should be rewritten", "They should be rewritten and merged"],
+      [49, 10, 28]);
+
+    pieChart("newspaper",
+      ["I like it", "Just use #information"],
+      [67, 15]);
+
+    pieChart("testing",
+      ["The current number is fine", "You should add less", "You should add more"],
+      [74, 5, 13]);
+
+    barChart("voice",
+      ["It's fine", "Too many testing VCs", "Too many music VCs", "Not enough VCs"],
+      [59, 22, 10, 8]);
+
+    pieChart("auxiliary",
+      ["They're alright", "They're a waste of space"],
+      [79, 5]);
+
+    pieChart("general",
+      ["No", "Yes"],
+      [49, 35]);
+
+    pieChart("modCoverage",
+      ["Good", "Bad", "So/so"],
+      [61, 13, 9]);
+
+    function radarChartDataset(index, label, data) {
+      return {
+        label: label,
+        data: data,
+        backgroundColor: 'rgba(0,0,0,0)',
+        borderColor: okabeIto2002Palette[index],
+        pointBackgroundColor: okabeIto2002Palette[index],
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: okabeIto2002Palette[index],
+        borderDash: dashes[index]
+      };
+    }
+
+    new Chart(document.getElementById("modRatings"), {
+      type: 'radar',
+      data: {
+        labels: ["Community interaction", "Makes improvements", "Fair and unbiased", "Availability", "Makes me feel safe"],
+        datasets: [
+          radarChartDataset(0, "meew0", [2.5625, 3.9091, 3.9412, 3.0938, 3.7647]),
+          radarChartDataset(1, "Danny", [2.6471, 2.7714, 3.5714, 3.3438, 3.5278]),
+          radarChartDataset(2, "Erisa", [4.1143, 3.4722, 3.5588, 3.9429, 3.8235]),
+          radarChartDataset(3, "Googie", [3.7647, 3.4412, 3.3235, 3.1714, 3.3429]),
+          radarChartDataset(4, "jagrosh", [2.8857, 3.3714, 3.6944, 3.2353, 3.5833]),
+          radarChartDataset(5, "Roadcrosser", [3.9444, 3.2941, 3.0571, 3.6857, 3.0000]),
+          radarChartDataset(6, "spoopy", [2.4412, 2.7647, 3.4571, 2.9429, 3.1471]),
+          radarChartDataset(7, "stupid cat", [4.1944, 3.8611, 3.7429, 3.8889, 3.6857]),
+          radarChartDataset(8, "Zeta", [1.8857, 2.0278, 2.6571, 1.9444, 2.4857])
+        ]
+      }
+    });
+
+    barChart("demoInitial",
+      ["[1]", "[2]", "[3]", "[4]"],
+      [12, 61, 23, 71]);
+
+    pieChart("serverAge",
+      ["Over a year", "Several months", "Several weeks", "Several days"],
+      [59, 24, 5, 8]);
+
+    pieChart("age",
+      ["other", "13 to 17", "18 to 24"],
+      [5, 52, 38]);
+
+    pieChart("lifeStatus",
+      ["Other", "Student (pre-college)", "Student (college/university)", "Unemployed", "Employed"],
+      [12, 117, 56, 7, 26]);
+
+    pieChart("gender",
+      ["Other", "Female", "Male"],
+      [10, 14, 67]);
+
+    pieChart("lgbt",
+      ["Yes", "No", "Maybe"],
+      [24, 54, 16]);
+
+    pieChart("lgbtMale",
+      ["Yes", "No", "Maybe"],
+      [7, 48, 9]);
+
+    pieChart("lgbtFemale",
+      ["Yes", "No", "Maybe"],
+      [11, 1, 2]);
+
+    new Chart(document.getElementById("timezones"), {
+      type: 'bar',
+      options: {
+        legend: { display: false },
+        scales: { xAxes: [{ ticks: { beginAtZero: true } } ] }
+      },
+      data: {
+        labels: ["-8", "-7", "-6", "-5", "-4", "-3:30", "-3", "-2", "-1", "+0", "+1", "+2", "+3", "+4", "+5", "+5:30", "+6", "+7", "+8", "+9", "+10", "+11", "+12", "+13", "+14"],
+        datasets: [{
+          label: "",
+          data: [5,1,6,6,2,1,1,0,0,11,13,2,4,2,0,3,0,1,0,0,5,2,0,0,1],
+          backgroundColor: "#000"
+        }]
+      }
+    });
+
+    pieChart("locOverall",
+      ["America", "Europe", "Australasia", "Africa"],
+      [36, 39, 12, 2]);
+
+    pieChart("locAmerica",
+      ["North America", "Central America/Caribbean", "South America"],
+      [34, 1, 1]);
+
+    pieChart("locEurope",
+      ["Northern/Western/Southern Europe", "Eastern Europe"],
+      [32, 7]);
+
+    pieChart("locAustralasia",
+      ["Australia/New Zealand", "Southeastern Asia", "Southern Asia", "Central Asia"],
+      [7, 3, 1, 1]);
+
+    pieChart("languages",
+      ["Other", "English", "German", "French", "Dutch"],
+      [41, 142, 17, 10, 8]);
+
+    new Chart(document.getElementById("languagesBar"), {
+      type: 'horizontalBar',
+      options: {
+        legend: { display: false },
+        scales: { xAxes: [{ ticks: { beginAtZero: true } } ] }
+      },
+      data: {
+        labels: ["Brazilian Portuguese", "C#", "Croatian", "Czech", "Danish", "Dutch", "Estonian", "Finnish", "Greek", "Hungarian", "Inuktitut", "Japanese", "Latvian", "Portuguese", "Russian", "Slovenian", "Spanish", "Swedish", "Valyrian", "Misc."],
+        datasets: [{
+          label: "",
+          data: [1, 2, 1, 3, 1, 8, 1, 4, 1, 1, 1, 1, 1, 3, 4, 1, 5, 2, 1, 6],
+          backgroundColor: okabeIto2002Palette[0]
+        }]
+      }
+    });
+
+    pieChart("anime",
+      ["Yes", "No"],
+      [48, 49]);
+
+    pieChart("animeOld",
+      ["Yes", "No"],
+      [117, 104]);
+
+    pieChart("activity",
+      ["1", "2", "3", "4", "5"],
+      [96, 45, 40, 28, 17], gradedPalette);
+
+    new Chart(document.getElementById("activityAnime"), {
+      type: 'pie',
+      options: quinceTooltipOptions,
+      data: {
+        labels: ["1", "2", "3", "4", "5"],
+        datasets: [
+          {
+            data: [41, 26, 21, 11, 4],
+            backgroundColor: gradedPalette
+          },
+          {
+            data: [52, 16, 20, 17, 12],
+            backgroundColor: gradedPalette
+          }
+        ]
+      }
+    });
+
+    new Chart(document.getElementById("animeCorrelations"), {
+      type: 'horizontalBar',
+      options: {
+        scales: { xAxes: [{ stacked: true, ticks: { beginAtZero: true } } ] }
+      },
+      data: {
+        labels: ["Server age: over a year", "Server age: Several months", "Server age: Days to weeks", "IRL Age: 13 to 17", "IRL Age: 18 to 24", "Gender: Female", "Gender: Male", "LGBTQ+: Yes", "LGBTQ+: No", "LGBTQ+: Maybe"],
+        datasets: [
+          {
+            label: "Yes",
+            data: [33,5,9,20,24,11,30,13,23,9],
+            backgroundColor: okabeIto2002Palette[0],
+            stack: "1"
+          },
+          {
+            label: "No",
+            data: [26,18,4,32,14,3,37,11,31,7],
+            backgroundColor: okabeIto2002Palette[1],
+            stack: "1"
+          }
+        ]
+      }
+    });
+
+    pieChart("cutest",
+      ["Other", "Specific user", "me", "you", "no one", "everyone"],
+      [14, 44, 12, 3, 7, 3]);
+
+    new Chart(document.getElementById("cutestBar"), {
+      type: 'horizontalBar',
+      options: {
+        legend: { display: false },
+        scales: { xAxes: [{ ticks: { beginAtZero: true } } ] }
+      },
+      data: {
+        labels: ["stupid cat", "Ovyerus", "Erisa", "Julia", "ry00001", "Martmists"],
+        datasets: [{
+          label: "",
+          data: [8, 5, 4, 3, 3, 2],
+          backgroundColor: okabeIto2002Palette[1]
+        }]
+      }
+    });
+
+    barChart("oralHygiene",
+      ["Other", "Morning", "Evening", "After meals", "I don't"],
+      [15, 59, 55, 10, 10]);
+
+    pieChart("oralHygienePie",
+      ["Morning + Evening", "Only in the morning", "Only in the evening", "Only after meals", "Neither"],
+      [42, 16, 13, 3, 18]);
+
+    pieChart("serverIcon",
+      ["Yes", "I preferred the old one", "What old one?"],
+      [55, 11, 32]);
+
+    new Chart(document.getElementById("serverIconAges"), {
+      type: 'pie',
+      options: quinceTooltipOptions,
+      data: {
+        labels: ["Over a year", "Several months", "Several weeks", "Several days"],
+        datasets: [
+          {
+            data: [15, 12, 1, 2],
+            backgroundColor: okabeIto2002Palette
+          },
+          {
+            data: [59, 24, 5, 8],
+            backgroundColor: okabeIto2002Palette
+          }
+        ]
+      }
+    });
+
+    pieChart("betterDiscord",
+      ["I don't know what that is", "Yes", "No", "Hell no"],
+      [30, 30, 39, 124]);
+
+    pieChart("beautifulDiscord",
+      ["I don't know what that is", "Yes", "No"],
+      [58, 68, 97]);
+
+    pieChart("selfbot",
+      ["I don't know what that is", "Yes, I wrote one myself", "Yes, I am using a public one", "No"],
+      [15, 129, 16, 63]);
+
+    pieChart("betterDiscordJudged",
+      ["I don't know what that is", "Yes", "No", "Hell no"],
+      [1, 3, 6, 58]);
+
+    pieChart("beautifulDiscordJudged",
+      ["I don't know what that is", "Yes", "No"],
+      [11, 3, 16]);
+
+    pieChart("dev",
+      ["Yes", "No"],
+      [170, 57]);
+
+    new Chart(document.getElementById("devHours"), {
+      type: 'bubble',
+      data: {
+        datasets: [
+          {
+            data: [{"x":1.0e-25,"y":0,"r":2},{"x":0.434949838394994,"y":0,"r":2},{"x":0.5,"y":0,"r":2},{"x":1,"y":0,"r":8},{"x":2,"y":0,"r":8},{"x":3,"y":0,"r":8},{"x":4,"y":0,"r":10},{"x":5,"y":0,"r":16},{"x":6,"y":0,"r":8},{"x":7,"y":0,"r":6},{"x":8,"y":0,"r":12},{"x":9,"y":0,"r":2},{"x":10,"y":0,"r":22},{"x":11,"y":0,"r":2},{"x":12,"y":0,"r":12},{"x":13,"y":0,"r":2},{"x":14,"y":0,"r":8},{"x":15,"y":0,"r":12},{"x":16,"y":0,"r":6},{"x":17,"y":0,"r":2},{"x":19,"y":0,"r":2},{"x":20,"y":0,"r":36},{"x":21,"y":0,"r":6},{"x":24,"y":0,"r":8},{"x":25,"y":0,"r":8},{"x":25.6,"y":0,"r":2},{"x":30,"y":0,"r":12},{"x":34,"y":0,"r":2},{"x":35,"y":0,"r":2},{"x":39,"y":0,"r":2},{"x":40,"y":0,"r":14},{"x":42,"y":0,"r":6},{"x":49.5,"y":0,"r":2},{"x":50,"y":0,"r":12},{"x":55,"y":0,"r":2},{"x":60,"y":0,"r":2},{"x":69,"y":0,"r":2},{"x":70,"y":0,"r":10},{"x":80,"y":0,"r":2},{"x":84,"y":0,"r":2},{"x":99,"y":0,"r":2},{"x":107,"y":0,"r":2},{"x":167,"y":0,"r":2},{"x":168,"y":0,"r":4}],
+            backgroundColor: okabeIto2002Palette20PercentAlpha[0],
+            borderColor: okabeIto2002Palette[0]
+          }
+        ]
+      },
+      options: {
+        legend: { display: false },
+        scales: {
+          yAxes: [{ display: false }]
+        }
+      }
+    });
+
+    new Chart(document.getElementById("devHoursZoomed"), {
+      type: 'bubble',
+      data: {
+        datasets: [
+          {
+            data: [{"x":1.0e-25,"y":0,"r":2},{"x":0.434949838394994,"y":0,"r":2},{"x":0.5,"y":0,"r":2},{"x":1,"y":0,"r":8},{"x":2,"y":0,"r":8},{"x":3,"y":0,"r":8},{"x":4,"y":0,"r":10},{"x":5,"y":0,"r":16},{"x":6,"y":0,"r":8},{"x":7,"y":0,"r":6},{"x":8,"y":0,"r":12},{"x":9,"y":0,"r":2},{"x":10,"y":0,"r":22},{"x":11,"y":0,"r":2},{"x":12,"y":0,"r":12},{"x":13,"y":0,"r":2},{"x":14,"y":0,"r":8},{"x":15,"y":0,"r":12},{"x":16,"y":0,"r":6},{"x":17,"y":0,"r":2},{"x":19,"y":0,"r":2},{"x":20,"y":0,"r":36},{"x":21,"y":0,"r":6},{"x":24,"y":0,"r":8},{"x":25,"y":0,"r":8},{"x":25.6,"y":0,"r":2},{"x":30,"y":0,"r":12},{"x":34,"y":0,"r":2},{"x":35,"y":0,"r":2},{"x":39,"y":0,"r":2},{"x":40,"y":0,"r":14}],
+            backgroundColor: okabeIto2002Palette20PercentAlpha[0],
+            borderColor: okabeIto2002Palette[0]
+          }
+        ]
+      },
+      options: {
+        legend: { display: false },
+        scales: {
+          yAxes: [{ display: false }]
+        }
+      }
+    });
+
+    pieChart("devMore",
+      ["Yes", "No", "Maybe"],
+      [134, 2, 25]);
+
+    pieChart("devPleasant",
+      ["1", "2", "3", "4", "5"],
+      [1, 0, 11, 49, 99], gradedPalette);
+    </script>
+  </body>
+</html>
